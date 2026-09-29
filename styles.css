@@ -241,6 +241,9 @@ body {
   color: var(--brun-doux);
   margin-bottom: 0.5rem;
   padding: 0;
+  line-height: 1.4;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .field label em,
@@ -282,16 +285,25 @@ body {
   background: rgba(255, 255, 255, 0.35);
 }
 
+.field-group legend {
+  padding: 0 0.5rem;
+  text-align: left;
+  max-width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 .check {
   display: flex;
   align-items: center;
   gap: 0.7rem;
   font-size: 1.1rem;
-  text-transform: none;
+  text-transform: none !important;
   letter-spacing: 0;
   color: var(--brun);
   margin-bottom: 0.8rem;
   cursor: pointer;
+  font-variant: normal;
 }
 
 .check input {
@@ -302,6 +314,19 @@ body {
 }
 
 .check em { color: var(--brun-clair); font-style: normal; }
+
+.convive-dynamique {
+  margin-bottom: 1.6rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.convive-dynamique .field {
+  margin-bottom: 1rem;
+}
+
+.convive-dynamique .field:last-child {
+  margin-bottom: 0.6rem;
+}
 
 .btn {
   display: block;

@@ -86,15 +86,64 @@
       <h2 class="section-title script">Votre présence</h2>
       <p class="section-sub">Merci de nous répondre avant le <strong>15 mai 2027</strong>.</p>
 
-      <!-- Bouton vers le Google Forms -->
-      <div class="gform-wrap">
-        <a class="btn-gform" href="https://docs.google.com/forms/d/e/1FAIpQLSeASsKBxVkEXCWlFNHJEphYiF_oTxc5t1QPpgnc9X5IB4NyIg/viewform" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
-          </svg>
-          Répondre au formulaire
-        </a>
-      </div>
+      <!-- Formulaire intégré -->
+      <form class="form" action="https://formspree.io/f/moevrden" method="POST">
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" autocomplete="family-name" required>
+        </div>
+        <div class="field">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" name="prenom" autocomplete="given-name" required>
+        </div>
+
+        <fieldset class="field field-group">
+          <legend>Serez-vous présent(e) ?</legend>
+          <label class="check">
+            <input type="checkbox" name="civil" value="Oui">
+            <span>Mariage civil <em>· 17 juin</em></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="mariage" value="Oui">
+            <span>Mariage <em>· 19 juin</em></span>
+          </label>
+        </fieldset>
+
+        <div class="field">
+          <label for="convives">Nombre de personnes <em>(enfants compris)</em></label>
+          <select id="convives" name="convives" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6+">6+</option>
+          </select>
+        </div>
+
+        <fieldset class="field field-group">
+          <legend>Allergies, intolérances, restrictions alimentaires</legend>
+          <label class="check">
+            <input type="checkbox" name="regime" value="Halal">
+            <span>Halal</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="regime" value="Sans gluten">
+            <span>Sans gluten</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="regime" value="Végétarien">
+            <span>Végétarien</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="regime" value="Autre">
+            <span>Autre <em>(précisez ci-dessous)</em></span>
+          </label>
+          <textarea class="field-textarea" name="regime_autre" rows="2" placeholder="Précisez si besoin…"></textarea>
+        </fieldset>
+
+        <button type="submit" class="btn">Envoyer ma réponse</button>
+      </form>
     </section>
 
   </main>

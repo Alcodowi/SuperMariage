@@ -222,44 +222,105 @@ body {
   border-color: var(--brun-doux);
 }
 
-/* ═══════════ BOUTON GOOGLE FORM ═══════════ */
+/* ═══════════ FORMULAIRE ═══════════ */
 
-.gform-wrap {
-  max-width: 40rem;
+.form {
+  max-width: 30rem;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
-.btn-gform {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--brun);
-  color: var(--ivoire);
-  text-decoration: none;
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  letter-spacing: 0.15em;
+.field { margin-bottom: 1.6rem; }
+
+.field label,
+.field legend {
+  display: block;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 1rem 2rem;
+  color: var(--brun-doux);
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.field label em,
+.field legend em {
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--brun-clair);
+}
+
+.field input[type="text"],
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--brun);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--brun-clair);
   border-radius: 2px;
+  padding: 0.7rem 0.9rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.field input[type="text"]:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--brun);
+  box-shadow: 0 0 0 3px rgba(111, 91, 69, 0.12);
+}
+
+.field textarea { resize: vertical; }
+
+.field-group {
+  border: 1px solid var(--brun-clair);
+  border-radius: 2px;
+  padding: 1.2rem 1.2rem 0.6rem;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--brun);
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.check input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--brun);
+  cursor: pointer;
+}
+
+.check em { color: var(--brun-clair); font-style: normal; }
+
+.btn {
+  display: block;
+  width: 100%;
+  font-family: var(--serif);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ivoire);
+  background: var(--brun);
+  border: none;
+  border-radius: 2px;
+  padding: 0.95rem 1.5rem;
+  cursor: pointer;
   transition: background 0.3s, transform 0.15s;
 }
 
-.btn-gform:hover { background: var(--brun-doux); }
-.btn-gform:active { transform: scale(0.98); }
-
-.btn-gform svg {
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-.gform-alt {
-  margin-top: 1.2rem;
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--brun-clair);
-}
+.btn:hover { background: var(--brun-doux); }
+.btn:active { transform: scale(0.99); }
 
 /* ═══════════ SÉPARATEUR FLORAL ═══════════ */
 

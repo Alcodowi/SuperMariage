@@ -42,6 +42,15 @@
   <main>
 
     <!-- ══════════════ LES RENDEZ-VOUS ══════════════ -->
+    <div class="section-ornament" aria-hidden="true">
+      <svg viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 12 C 20 12, 30 4, 45 10 S 70 20, 78 12 S 100 4, 118 12" stroke="currentColor" stroke-width="0.8"/>
+        <circle cx="60" cy="12" r="1.6" fill="currentColor"/>
+        <circle cx="45" cy="10" r="1" fill="currentColor"/>
+        <circle cx="78" cy="12" r="1" fill="currentColor"/>
+      </svg>
+    </div>
+
     <section class="section" id="rendez-vous">
       <h2 class="section-title script">Les rendez-vous</h2>
 
@@ -77,26 +86,71 @@
       <h2 class="section-title script">Votre présence</h2>
       <p class="section-sub">Merci de nous répondre avant le <strong>15 mai 2027</strong>.</p>
 
-      <!-- Formulaire Google Forms intégré -->
+      <!-- Bouton vers le Google Forms -->
       <div class="gform-wrap">
-        <iframe
-          id="gform"
-          class="gform"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSeASsKBxVkEXCWlFNHJEphYiF_oTxc5t1QPpgnc9X5IB4NyIg/viewform?usp=pp_url"
-          title="Formulaire de réponse — Noelia & Jean-Baptiste"
-          loading="lazy">Chargement du formulaire…</iframe>
-        <p class="gform-alt">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeASsKBxVkEXCWlFNHJEphYiF_oTxc5t1QPpgnc9X5IB4NyIg/viewform" target="_blank" rel="noopener">Le formulaire ne s'affiche pas ? Ouvrez-le dans un nouvel onglet ↗</a>
-        </p>
+        <a class="btn-gform" href="https://docs.google.com/forms/d/e/1FAIpQLSeASsKBxVkEXCWlFNHJEphYiF_oTxc5t1QPpgnc9X5IB4NyIg/viewform" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+          </svg>
+          Répondre au formulaire
+        </a>
+        <p class="gform-alt">Le formulaire s'ouvre dans un nouvel onglet — 2 minutes suffisent 🤎</p>
+      </div>
+    </section>
+
+    <!-- ══════════════ HÉBERGEMENT ══════════════ -->
+    <div class="section-ornament" aria-hidden="true">
+      <svg viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 12 C 20 12, 30 4, 45 10 S 70 20, 78 12 S 100 4, 118 12" stroke="currentColor" stroke-width="0.8"/>
+        <circle cx="60" cy="12" r="1.6" fill="currentColor"/>
+        <circle cx="45" cy="10" r="1" fill="currentColor"/>
+        <circle cx="78" cy="12" r="1" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <section class="section" id="hebergement">
+      <h2 class="section-title script">Hébergement</h2>
+      <p class="section-sub">Pour ceux qui viennent de loin, voici quelques adresses près de La Baronne.</p>
+
+      <div class="events">
+        <article class="event">
+          <h3 class="event-name">Hôtel / Gîte 1</h3>
+          <p class="event-place">Adresse à compléter</p>
+          <a class="event-link" href="#" target="_blank" rel="noopener">Itinéraire</a>
+        </article>
+
+        <article class="event">
+          <h3 class="event-name">Hôtel / Gîte 2</h3>
+          <p class="event-place">Adresse à compléter</p>
+          <a class="event-link" href="#" target="_blank" rel="noopener">Itinéraire</a>
+        </article>
+
+        <article class="event">
+          <h3 class="event-name">Hôtel / Gîte 3</h3>
+          <p class="event-place">Adresse à compléter</p>
+          <a class="event-link" href="#" target="_blank" rel="noopener">Itinéraire</a>
+        </article>
       </div>
     </section>
 
   </main>
 
+  <!-- ══════════════ BOUTON FLOTTANT ══════════════ -->
+  <a href="#rsvp" class="fab" id="fab" aria-label="Répondre au formulaire">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+    </svg>
+    <span>Répondre</span>
+  </a>
+
   <!-- ══════════════ PIED DE PAGE ══════════════ -->
   <footer class="footer">
     <p class="footer-names script">Noelia &amp; Jean-Baptiste</p>
     <p class="footer-date">19 · 06 · 2027</p>
+    <div class="footer-qr">
+      <img src="qrcode.png" alt="QR code vers le site du mariage" width="80" height="80">
+      <p>Scannez pour accéder au site</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

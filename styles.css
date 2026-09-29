@@ -45,6 +45,8 @@ body {
   text-transform: uppercase;
   color: var(--brun-doux);
   margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeInDown 1s ease-out 0.3s forwards;
 }
 
 .hero-title {
@@ -58,6 +60,8 @@ body {
   font-family: var(--script);
   font-size: clamp(3.2rem, 11vw, 5.5rem);
   color: var(--brun);
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.8s forwards;
 }
 
 .hero-title .amp {
@@ -66,12 +70,16 @@ body {
   font-style: italic;
   color: var(--brun-clair);
   margin: 0.4rem 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1.6s forwards;
 }
 
 .ornament {
   color: var(--brun-clair);
   width: 10rem;
   margin: 0 auto 2rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 2s forwards;
 }
 
 .ornament svg { width: 100%; height: auto; display: block; }
@@ -81,6 +89,8 @@ body {
   letter-spacing: 0.3em;
   color: var(--brun-doux);
   margin-bottom: 3.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 2.4s forwards;
 }
 
 .hero-scroll {
@@ -94,6 +104,8 @@ body {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   transition: color 0.3s;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 3s forwards;
 }
 
 .hero-scroll svg {
@@ -103,6 +115,21 @@ body {
 }
 
 .hero-scroll:hover { color: var(--brun); }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 @keyframes flotter {
   0%, 100% { transform: translateY(0); }
@@ -195,119 +222,95 @@ body {
   border-color: var(--brun-doux);
 }
 
-/* ═══════════ FORMULAIRES ═══════════ */
+/* ═══════════ BOUTON GOOGLE FORM ═══════════ */
 
-.form {
-  max-width: 30rem;
+.gform-wrap {
+  max-width: 40rem;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
-.field { margin-bottom: 1.6rem; }
-
-.field label,
-.field legend {
-  display: block;
-  font-size: 0.95rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--brun-doux);
-  margin-bottom: 0.5rem;
-  padding: 0;
-}
-
-.field label em,
-.field legend em {
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: 0;
-  color: var(--brun-clair);
-}
-
-.field input[type="text"],
-.field input[type="number"],
-.field textarea {
-  width: 100%;
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  color: var(--brun);
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid var(--brun-clair);
-  border-radius: 2px;
-  padding: 0.7rem 0.9rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.field input:focus,
-.field textarea:focus {
-  outline: none;
-  border-color: var(--brun);
-  box-shadow: 0 0 0 3px rgba(111, 91, 69, 0.12);
-}
-
-.field textarea { resize: vertical; }
-
-.field-group {
-  border: 1px solid var(--brun-clair);
-  border-radius: 2px;
-  padding: 1.2rem 1.2rem 0.6rem;
-  background: rgba(255, 255, 255, 0.35);
-}
-
-.check {
-  display: flex;
+.btn-gform {
+  display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  font-size: 1.1rem;
-  text-transform: none;
-  letter-spacing: 0;
-  color: var(--brun);
-  margin-bottom: 0.8rem;
-  cursor: pointer;
-}
-
-.check input {
-  width: 1.15rem;
-  height: 1.15rem;
-  accent-color: var(--brun);
-  cursor: pointer;
-}
-
-.check em { color: var(--brun-clair); font-style: normal; }
-
-.form-hint {
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--brun-clair);
-  margin-top: 0.4rem;
-}
-
-.form-hint.erreur { color: #a25b4a; }
-
-.btn {
-  display: block;
-  width: 100%;
-  font-family: var(--serif);
-  font-size: 1rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--ivoire);
+  gap: 0.6rem;
   background: var(--brun);
-  border: none;
+  color: var(--ivoire);
+  text-decoration: none;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
   border-radius: 2px;
-  padding: 0.95rem 1.5rem;
-  cursor: pointer;
   transition: background 0.3s, transform 0.15s;
 }
 
-.btn:hover { background: var(--brun-doux); }
-.btn:active { transform: scale(0.99); }
+.btn-gform:hover { background: var(--brun-doux); }
+.btn-gform:active { transform: scale(0.98); }
 
-.form-success {
+.btn-gform svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.gform-alt {
   margin-top: 1.2rem;
-  text-align: center;
+  font-size: 0.95rem;
   font-style: italic;
-  color: var(--brun);
+  color: var(--brun-clair);
+}
+
+/* ═══════════ SÉPARATEUR FLORAL ═══════════ */
+
+.section-ornament {
+  color: var(--brun-clair);
+  width: 8rem;
+  margin: 0 auto;
+  padding: 1rem 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.section-ornament svg { width: 100%; height: auto; display: block; }
+
+/* ═══════════ BOUTON FLOTTANT ═══════════ */
+
+.fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--brun);
+  color: var(--ivoire);
+  text-decoration: none;
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.4rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(111, 91, 69, 0.35);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.4s, transform 0.4s, background 0.3s;
+}
+
+.fab.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.fab:hover { background: var(--brun-doux); }
+
+.fab svg {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 /* ═══════════ PIED DE PAGE ═══════════ */
@@ -329,6 +332,26 @@ body {
   font-size: 1rem;
   letter-spacing: 0.3em;
   color: var(--brun-doux);
+}
+
+.footer-qr {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-qr img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 4px;
+}
+
+.footer-qr p {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--brun-clair);
 }
 
 /* ═══════════ RESPONSIVE ═══════════ */

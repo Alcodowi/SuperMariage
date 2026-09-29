@@ -1,0 +1,344 @@
+/* ─────────────────────────────────────────────
+   Noelia & Jean-Baptiste — styles
+   Ivoire · brun doux · serif & manuscrit
+   ───────────────────────────────────────────── */
+
+:root {
+  --ivoire: #faf6ee;
+  --ivoire-fond: #f5efe3;
+  --brun: #6f5b45;
+  --brun-doux: #8a755c;
+  --brun-clair: #b3a48c;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --script: "Great Vibes", cursive;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ivoire);
+  color: var(--brun);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══════════ ACCUEIL ═══════════ */
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.hero-inner { max-width: 40rem; }
+
+.hero-kicker {
+  font-size: 1.05rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--brun-doux);
+  margin-bottom: 2.5rem;
+}
+
+.hero-title {
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.hero-title .script {
+  display: block;
+  font-family: var(--script);
+  font-size: clamp(3.2rem, 11vw, 5.5rem);
+  color: var(--brun);
+}
+
+.hero-title .amp {
+  display: block;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--brun-clair);
+  margin: 0.4rem 0;
+}
+
+.ornament {
+  color: var(--brun-clair);
+  width: 10rem;
+  margin: 0 auto 2rem;
+}
+
+.ornament svg { width: 100%; height: auto; display: block; }
+
+.hero-date {
+  font-size: 1.3rem;
+  letter-spacing: 0.3em;
+  color: var(--brun-doux);
+  margin-bottom: 3.5rem;
+}
+
+.hero-scroll {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--brun-doux);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.hero-scroll svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  animation: flotter 2.2s ease-in-out infinite;
+}
+
+.hero-scroll:hover { color: var(--brun); }
+
+@keyframes flotter {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ═══════════ SECTIONS ═══════════ */
+
+.section {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 7vw, 3.4rem);
+  color: var(--brun);
+  margin-bottom: 1.2rem;
+}
+
+.section-sub {
+  color: var(--brun-doux);
+  max-width: 32rem;
+  margin: 0 auto 2.5rem;
+}
+
+.section-sub strong { color: var(--brun); font-weight: 600; }
+
+/* ═══════════ ÉVÉNEMENTS ═══════════ */
+
+.events {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.event {
+  padding: 2.2rem 1.5rem;
+  border: 1px solid rgba(179, 164, 140, 0.45);
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.event-main {
+  background: var(--ivoire-fond);
+  border-color: var(--brun-clair);
+}
+
+.event-date {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: var(--brun-clair);
+  margin-bottom: 0.8rem;
+}
+
+.event-name {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.event-time {
+  font-size: 1.15rem;
+  color: var(--brun-doux);
+}
+
+.event-place {
+  font-style: italic;
+  color: var(--brun-doux);
+  margin-bottom: 1.2rem;
+}
+
+.event-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brun);
+  text-decoration: none;
+  border-bottom: 1px solid var(--brun-clair);
+  padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.event-link:hover {
+  color: var(--brun-doux);
+  border-color: var(--brun-doux);
+}
+
+/* ═══════════ FORMULAIRES ═══════════ */
+
+.form {
+  max-width: 30rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.field { margin-bottom: 1.6rem; }
+
+.field label,
+.field legend {
+  display: block;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brun-doux);
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.field label em,
+.field legend em {
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--brun-clair);
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field textarea {
+  width: 100%;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--brun);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid var(--brun-clair);
+  border-radius: 2px;
+  padding: 0.7rem 0.9rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--brun);
+  box-shadow: 0 0 0 3px rgba(111, 91, 69, 0.12);
+}
+
+.field textarea { resize: vertical; }
+
+.field-group {
+  border: 1px solid var(--brun-clair);
+  border-radius: 2px;
+  padding: 1.2rem 1.2rem 0.6rem;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.1rem;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--brun);
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.check input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--brun);
+  cursor: pointer;
+}
+
+.check em { color: var(--brun-clair); font-style: normal; }
+
+.form-hint {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--brun-clair);
+  margin-top: 0.4rem;
+}
+
+.form-hint.erreur { color: #a25b4a; }
+
+.btn {
+  display: block;
+  width: 100%;
+  font-family: var(--serif);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ivoire);
+  background: var(--brun);
+  border: none;
+  border-radius: 2px;
+  padding: 0.95rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.15s;
+}
+
+.btn:hover { background: var(--brun-doux); }
+.btn:active { transform: scale(0.99); }
+
+.form-success {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-style: italic;
+  color: var(--brun);
+}
+
+/* ═══════════ PIED DE PAGE ═══════════ */
+
+.footer {
+  text-align: center;
+  padding: 4rem 1.5rem 4.5rem;
+  border-top: 1px solid rgba(179, 164, 140, 0.4);
+}
+
+.footer-names {
+  font-family: var(--script);
+  font-size: 2.4rem;
+  color: var(--brun);
+  margin-bottom: 0.4rem;
+}
+
+.footer-date {
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: var(--brun-doux);
+}
+
+/* ═══════════ RESPONSIVE ═══════════ */
+
+@media (min-width: 46rem) {
+  .events { grid-template-columns: repeat(3, 1fr); }
+  .event-main { transform: scale(1.04); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-scroll svg { animation: none; }
+}

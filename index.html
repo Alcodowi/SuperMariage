@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noelia &amp; Jean-Baptiste — Mariage</title>
+  <meta name="description" content="Vous êtes invités au mariage de Noelia & Jean-Baptiste — 19 juin 2027.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ══════════════ ACCUEIL ══════════════ -->
+  <header class="hero" id="accueil">
+    <div class="hero-inner">
+      <p class="hero-kicker">Vous êtes invités</p>
+      <h1 class="hero-title">
+        <span class="script">Noelia</span>
+        <span class="amp">&amp;</span>
+        <span class="script">Jean-Baptiste</span>
+      </h1>
+      <div class="ornament" aria-hidden="true">
+        <svg viewBox="0 0 120 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 12 C 20 12, 30 4, 45 10 S 70 20, 78 12 S 100 4, 118 12" stroke="currentColor" stroke-width="0.8"/>
+          <circle cx="60" cy="12" r="1.6" fill="currentColor"/>
+          <circle cx="45" cy="10" r="1" fill="currentColor"/>
+          <circle cx="78" cy="12" r="1" fill="currentColor"/>
+        </svg>
+      </div>
+      <p class="hero-date">19 · 06 · 2027</p>
+      <a class="hero-scroll" href="#rendez-vous" aria-label="Découvrir la suite">
+        <span>Découvrir</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M12 4v16m0 0l-6-6m6 6l6-6"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════ LES RENDEZ-VOUS ══════════════ -->
+    <section class="section" id="rendez-vous">
+      <h2 class="section-title script">Les rendez-vous</h2>
+
+      <div class="events">
+        <article class="event">
+          <p class="event-date">17 · 06 · 2027</p>
+          <h3 class="event-name">Mariage civil</h3>
+          <p class="event-time">11h00</p>
+          <p class="event-place">Saint-Lieux-lès-Lavaur</p>
+          <a class="event-link" href="https://www.google.com/maps/search/?api=1&query=Mairie+Saint-Lieux-lès-Lavaur" target="_blank" rel="noopener">Itinéraire</a>
+        </article>
+
+        <article class="event event-main">
+          <p class="event-date">19 · 06 · 2027</p>
+          <h3 class="event-name">Cérémonie religieuse</h3>
+          <p class="event-time">15h00</p>
+          <p class="event-place">Saint-Sulpice-la-Pointe</p>
+          <a class="event-link" href="https://www.google.com/maps/search/?api=1&query=Église+Saint-Sulpice-la-Pointe" target="_blank" rel="noopener">Itinéraire</a>
+        </article>
+
+        <article class="event">
+          <p class="event-date">19 · 06 · 2027</p>
+          <h3 class="event-name">Réception</h3>
+          <p class="event-time">La Baronne</p>
+          <p class="event-place">Buzet-sur-Tarn</p>
+          <a class="event-link" href="https://www.google.com/maps/search/?api=1&query=La+Baronne+Buzet-sur-Tarn" target="_blank" rel="noopener">Itinéraire</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════════ RSVP ══════════════ -->
+    <section class="section" id="rsvp">
+      <h2 class="section-title script">Votre présence</h2>
+      <p class="section-sub">Merci de nous répondre avant le <strong>15 mai 2027</strong>.</p>
+
+      <form id="rsvp-form" class="form" novalidate>
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" name="prenom" autocomplete="given-name" required>
+        </div>
+
+        <fieldset class="field field-group">
+          <legend>Serez-vous présent(e) ?</legend>
+          <label class="check">
+            <input type="checkbox" name="civil" value="Mariage civil — 17 juin">
+            <span>Mariage civil <em>· 17 juin</em></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="mariage" value="Mariage — 19 juin">
+            <span>Mariage <em>· 19 juin</em></span>
+          </label>
+          <p class="form-hint" id="presence-hint">Sélectionnez au moins un événement.</p>
+        </fieldset>
+
+        <div class="field">
+          <label for="convives">Nombre de personnes <em>(enfants compris)</em></label>
+          <input type="number" id="convives" name="convives" min="1" max="12" value="1" required>
+        </div>
+
+        <button type="submit" class="btn">Envoyer ma réponse</button>
+        <p class="form-success" id="rsvp-success" hidden>Merci ! Votre réponse a bien été enregistrée. 🤎</p>
+      </form>
+    </section>
+
+    <!-- ══════════════ REPAS ══════════════ -->
+    <section class="section" id="repas">
+      <h2 class="section-title script">Le repas</h2>
+      <p class="section-sub">Afin de préparer au mieux le dîner, merci de nous indiquer, pour chaque invité, les éventuelles allergies, intolérances ou restrictions alimentaires.</p>
+
+      <form id="repas-form" class="form" novalidate>
+        <div class="field">
+          <label for="repas-nom">Nom et prénom de l'invité</label>
+          <input type="text" id="repas-nom" name="repas-nom" required>
+        </div>
+        <div class="field">
+          <label for="repas-info">Allergies, intolérances, restrictions…</label>
+          <textarea id="repas-info" name="repas-info" rows="3" placeholder="Ex. : allergie aux arachides, sans gluten, végétarien…"></textarea>
+        </div>
+        <button type="submit" class="btn">Ajouter une information</button>
+        <p class="form-success" id="repas-success" hidden>Merci, c'est bien noté ! 🤎</p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ PIED DE PAGE ══════════════ -->
+  <footer class="footer">
+    <p class="footer-names script">Noelia &amp; Jean-Baptiste</p>
+    <p class="footer-date">19 · 06 · 2027</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

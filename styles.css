@@ -664,26 +664,6 @@ body {
   color: var(--brun);
 }
 
-/* Aides du formulaire */
-
-.field-help {
-  font-size: 0.98rem;
-  font-style: italic;
-  color: var(--brun-doux);
-  text-transform: none;
-  letter-spacing: 0;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.field-note {
-  font-size: 0.88rem;
-  font-style: italic;
-  color: var(--brun-clair);
-  margin-top: 0.4rem;
-  line-height: 1.55;
-}
-
 /* ═══════════ RESPONSIVE ═══════════ */
 
 @media (min-width: 46rem) {
@@ -701,7 +681,6 @@ body {
 @media (max-width: 26rem) {
   .stay { padding: 1.3rem 1.15rem; }
   .note-block { padding: 1.4rem 1.2rem; }
-  .field-help { font-size: 0.92rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
